@@ -1,0 +1,10 @@
+MySQL:
+  DSN: "user:password@tcp(127.0.0.1:3306)/dbname"
+
+Redis:
+  Addr: "localhost:6379"
+  Password: "yourpassword"
+  DB: 0
+
+Consul:
+  Addr: "localhost:8500"
