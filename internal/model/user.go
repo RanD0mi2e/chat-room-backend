@@ -7,5 +7,5 @@ type User struct {
 	Email     string `db:"email"`
 	Phone     string `db:"phone"`
 	AvatarUrl string `db:"avatar_url"`
-	Server    Server
+	Server    Server `db:"-"`
 }
