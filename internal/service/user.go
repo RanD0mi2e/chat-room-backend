@@ -1,6 +1,9 @@
 package service
 
-import "chat-app-backend-service/internal/repository"
+import (
+	"chat-app-backend-service/internal/model"
+	"chat-app-backend-service/internal/repository"
+)
 
 type userService struct {
 	*Service
@@ -8,7 +11,7 @@ type userService struct {
 }
 
 type UserService interface {
-	GetUserInfoById(id int) (*repository.User, error)
+	GetUserInfoById(id int) (*model.User, error)
 }
 
 func NewUserService(service *Service, userRepo repository.UserRepo) UserService {
@@ -18,6 +21,6 @@ func NewUserService(service *Service, userRepo repository.UserRepo) UserService 
 	}
 }
 
-func (s *userService) GetUserInfoById(id int) (*repository.User, error) {
+func (s *userService) GetUserInfoById(id int) (*model.User, error) {
 	return s.userRepo.GetUserById(id)
 }
